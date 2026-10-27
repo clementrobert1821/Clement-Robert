@@ -1,34 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bonjour</title>
-  <style>
-    :root { color-scheme: light; font-family: system-ui, sans-serif; }
-    * { box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      background: #f5f7fb;
-      color: #172033;
-    }
-    main {
-      padding: 3rem 4rem;
-      border: 1px solid #e1e6ef;
-      border-radius: 1.25rem;
-      background: white;
-      box-shadow: 0 1rem 3rem rgb(23 32 51 / 8%);
-      text-align: center;
-    }
-    h1 { margin: 0; font-size: clamp(3rem, 12vw, 6rem); letter-spacing: -0.06em; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Robert - E-Portfolio INP ENSEEIHT</title>
+    
+    <!-- Intégration de Tailwind CSS pour le style (sans fichiers externes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Importation de polices Google (Playfair Display pour le côté académique/élégant, Inter pour le reste) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Configuration de Tailwind pour utiliser les polices importées
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        // Couleur de fond légèrement crème inspirée de ta capture
+                        'portfolio-bg': '#fcfaf8', 
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Effet de zoom subtil sur les images au survol pour plus d'interactivité */
+        .card-img-container {
+            overflow: hidden;
+        }
+        .card-img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-card:hover .card-img {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-  <main>
-    <h1>Bonjour&nbsp;!</h1>
-  </main>
+<body class="bg-portfolio-bg text-gray-900 font-sans antialiased min-h-screen">
+
+    <!-- En-tête principal -->
+    <header class="max-w-5xl mx-auto pt-12 pb-8 px-4">
+        
+        <!-- Espace pour le logo (INP ENSEEIHT) -->
+        <div class="flex justify-center mb-10">
+            <!-- Remplacer le src par l'URL officielle du logo ENSEEIHT plus tard si nécessaire -->
+            <img src="https://placehold.co/800x160/2b4c7e/ffffff?text=INP+ENSEEIHT+Toulouse&font=Montserrat" 
+                 alt="Logo INP ENSEEIHT" 
+                 class="h-20 md:h-28 w-auto object-contain shadow-sm">
+        </div>
+
+        <!-- Titre : Nom de l'étudiant -->
+        <h1 class="text-center font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide text-gray-900 mb-8">
+            Clément Robert
+        </h1>
+
+        <!-- Sous-titre : Contents (avec le fond blanc typique de ta maquette) -->
+        <div class="bg-white py-3 shadow-sm mx-auto max-w-3xl">
+            <h2 class="text-center font-serif text-2xl md:text-3xl text-gray-800">
+                Contents
+            </h2>
+        </div>
+    </header>
+
+    <!-- Contenu principal : Grille de navigation (2 colonnes) -->
+    <main class="max-w-5xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mt-8">
+
+            <!-- Carte 1 : Welcome -->
+            <!-- Note future : Lier vers une page de présentation (objectifs, profil) -->
+            <a href="#welcome" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Welcome script" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Welcome
+                </h3>
+            </a>
+
+            <!-- Carte 2 : Engineering course -->
+            <!-- 
+                Note future pour le contenu (à développer dans la page liée) :
+                - Modélisation et asservissement (projet homme-canon sous MATLAB/Simulink).
+                - Synthèse de systèmes numériques (BE CULSEC).
+                - Simulations en électronique de puissance (PSpice, PLECS).
+            -->
+            <a href="#engineering" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Green circuit board" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Engineering course
+                </h3>
+            </a>
+
+            <!-- Carte 3 : International mobility -->
+            <!-- Note future : Parler du projet d'échange à l'University of Sydney et du score IELTS -->
+            <a href="#international" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1523995462485-3d171b5c7348?auto=format&fit=crop&q=80&w=1000" 
+                         alt="International flags" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    International mobility
+                </h3>
+            </a>
+
+            <!-- Carte 4 : Sustainability & Civic engagement -->
+            <!-- Note future : Inclure l'observation de la maintenance des planeurs à Beynes et l'impact carbone -->
+            <a href="#sustainability" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Hands holding a globe with eco doodles" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Sustainability & Civic engagement
+                </h3>
+            </a>
+
+            <!-- Carte 5 : Sport & other activities -->
+            <!-- Note future : Détailler l'entraînement au poids du corps et le football loisir -->
+            <a href="#sport" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Sports equipment collage" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Sport & other activities
+                </h3>
+            </a>
+
+            <!-- Carte 6 : Career development -->
+            <!-- Note future : Cible = aéronautique en Île-de-France, recherche de stage d'application 2 mois -->
+            <a href="#career" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Hands signing a document on a desk" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Career development
+                </h3>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Pied de page simple -->
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2026 Clément Robert - INP ENSEEIHT</p>
+    </footer>
+
 </body>
 </html>
