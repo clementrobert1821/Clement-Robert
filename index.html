@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering course - Clément Robert</title>
+    <title>Clément Robert - E-Portfolio INP ENSEEIHT</title>
     
+    <!-- Intégration de Tailwind CSS pour le style (sans fichiers externes) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Importation de polices Google (Playfair Display pour le côté académique/élégant, Inter pour le reste) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <script>
+        // Configuration de Tailwind pour utiliser les polices importées
         tailwind.config = {
             theme: {
                 extend: {
@@ -19,6 +23,139 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
+                        // Couleur de fond légèrement crème inspirée de ta capture
                         'portfolio-bg': '#fcfaf8', 
                     }
                 }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Effet de zoom subtil sur les images au survol pour plus d'interactivité */
+        .card-img-container {
+            overflow: hidden;
+        }
+        .card-img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-card:hover .card-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-portfolio-bg text-gray-900 font-sans antialiased min-h-screen">
+
+    <!-- En-tête principal -->
+    <header class="max-w-5xl mx-auto pt-12 pb-8 px-4">
+        
+        <!-- Espace pour le logo (INP ENSEEIHT) -->
+        <div class="flex justify-center mb-10">
+            <img src="IMG_2066.png" 
+                 alt="Logo INP ENSEEIHT" 
+                 class="h-20 md:h-28 w-auto object-contain shadow-sm">
+        </div>
+
+        <!-- Titre : Nom de l'étudiant -->
+        <h1 class="text-center font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide text-gray-900 mb-8">
+            Clément Robert
+        </h1>
+
+        <!-- Sous-titre : Contents (avec le fond blanc typique de ta maquette) -->
+        <div class="bg-white py-3 shadow-sm mx-auto max-w-3xl">
+            <h2 class="text-center font-serif text-2xl md:text-3xl text-gray-800">
+                Contents
+            </h2>
+        </div>
+    </header>
+
+    <!-- Contenu principal : Grille de navigation (2 colonnes) -->
+    <main class="max-w-5xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mt-8">
+
+            <!-- Carte 1 : Welcome -->
+            <a href="welcome.html" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Welcome script" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Welcome
+                </h3>
+            </a>
+
+            <!-- Carte 2 : Engineering course -->
+            <a href="engineering.html" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Green circuit board" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Engineering course
+                </h3>
+            </a>
+
+            <!-- Carte 3 : International mobility -->
+            <!-- Note : le lien est sur #international en attendant de créer la page -->
+            <a href="#international" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="IMG_2064.jpeg" 
+                         alt="International flags" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    International mobility
+                </h3>
+            </a>
+
+            <!-- Carte 4 : Sustainability and Civic engagement -->
+            <!-- Note : le lien est sur #sustainability en attendant de créer la page -->
+            <a href="#sustainability" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Hands holding a globe with eco doodles" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Sustainability and Civic engagement
+                </h3>
+            </a>
+
+            <!-- Carte 5 : Sport and other activities -->
+            <!-- Note : le lien est sur #sport en attendant de créer la page -->
+            <a href="#sport" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Sports equipment collage" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Sport and other activities
+                </h3>
+            </a>
+
+            <!-- Carte 6 : Career development -->
+            <!-- Note : le lien est sur #career en attendant de créer la page -->
+            <a href="#career" class="portfolio-card block group">
+                <div class="card-img-container rounded-sm shadow-sm bg-white">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Hands signing a document on a desk" 
+                         class="card-img w-full h-64 md:h-72 object-cover">
+                </div>
+                <h3 class="mt-4 font-serif font-bold text-lg md:text-xl text-gray-900 pl-2">
+                    Career development
+                </h3>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Pied de page simple -->
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2026 Clément Robert - INP ENSEEIHT</p>
+    </footer>
+
+</body>
+</html>
