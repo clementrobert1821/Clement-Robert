@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Development - Clément Robert</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'portfolio-bg': '#fcfaf8', 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-portfolio-bg text-gray-900 font-sans antialiased min-h-screen">
+
+    <!-- En-tête -->
+    <header class="max-w-5xl mx-auto pt-12 pb-8 px-4">
+        <div class="flex justify-center mb-10">
+            <img src="IMG_2066.png" alt="Logo INP ENSEEIHT" class="h-20 md:h-28 w-auto object-contain shadow-sm">
+        </div>
+        <h1 class="text-center font-serif text-4xl md:text-5xl font-semibold tracking-wide text-gray-900 mb-8">
+            Career Development
+        </h1>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pb-20">
+        <!-- Bouton de retour -->
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+                <span class="mr-2">&larr;</span> Back to Contents
+            </a>
+        </div>
+
+        <div class="space-y-12">
+            
+            <!-- Section Professional Experiences -->
+            <section class="bg-white shadow-sm p-8 md:p-12 rounded-sm border-t-4 border-gray-900">
+                <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 text-gray-900 border-b pb-4">Professional Experiences</h2>
+                
+                <div class="space-y-10">
+                    
+                    <!-- Beynes Observation -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-start">
+                        <div class="lg:w-2/3">
+                            <h3 class="font-serif text-xl font-bold mb-2">Observation Internship – Beynes Aerodrome</h3>
+                            <div class="text-gray-700 leading-relaxed text-justify space-y-4">
+                                <p>
+                                    During my internship at Beynes aerodrome, I focused primarily on the technical maintenance of the glider fleet. I shadowed the mechanics in the workshop, observing how aircraft structures are inspected and prepared. 
+                                </p>
+                                <p>
+                                    This hands-on experience gave me a concrete understanding of the mechanical rigor and strict safety protocols required in aviation maintenance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 w-full flex justify-center items-center">
+                            <!-- Remplacer "beynes_logo.png" par ton image si tu l'as -->
+                            <img src="beynes_logo.png" alt="Centre Aéronautique Beynes" class="w-2/3 h-auto object-contain" onerror="this.src='https://placehold.co/300x150/e2e8f0/475569?text=Beynes+Aerodrome'">
+                        </div>
+                    </div>
+
+                    <!-- G20 Seasonal Job -->
+                    <div class="flex flex-col lg:flex-row gap-8 items-start pt-6 border-t border-gray-100">
+                        <div class="lg:w-2/3">
+                            <h3 class="font-serif text-xl font-bold mb-2">Seasonal Employment – G20 Supermarket</h3>
+                            <p class="text-sm text-gray-500 mb-3">June 2026 – August 2026</p>
+                            <div class="text-gray-700 leading-relaxed text-justify space-y-4">
+                                <p>
+                                    Over the summer of 2026, I worked as a seasonal employee at a G20 supermarket. This role required adaptability, customer service skills, and efficient inventory management in a fast-paced retail environment.
+                                </p>
+                                <p>
+                                    It was a valuable professional experience that taught me teamwork, responsibility, and the importance of maintaining high organizational standards under pressure.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 w-full flex justify-center items-center">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=400" alt="Supermarket aisles" class="w-full h-auto rounded-sm shadow-sm object-cover">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section Resumes and LinkedIn -->
+            <section class="bg-white shadow-sm p-8 md:p-12 rounded-sm border-b-4 border-gray-900">
+                <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 text-gray-900 border-b pb-4">LinkedIn & Resumes</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    
+                    <!-- CV Français -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="font-serif font-bold text-lg mb-4">Resume (French)</h3>
+                        <!-- Remplacer "cv_fr.jpg" par l'image de ton CV -->
+                        <img src="cv_fr.jpg" alt="CV Français" class="w-full max-w-[250px] h-auto shadow-md border border-gray-200 transition-transform duration-300 hover:scale-105" onerror="this.src='https://placehold.co/210x297/e2e8f0/475569?text=CV+FR'">
+                        <a href="CV_Clement_Robert_FR.pdf" target="_blank" class="mt-4 text-sm font-semibold text-blue-600 hover:underline">Download PDF</a>
+                    </div>
+
+                    <!-- CV Anglais -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="font-serif font-bold text-lg mb-4">Resume (English)</h3>
+                        <!-- Remplacer "cv_en.jpg" par l'image de ton CV -->
+                        <img src="cv_en.jpg" alt="English Resume" class="w-full max-w-[250px] h-auto shadow-md border border-gray-200 transition-transform duration-300 hover:scale-105" onerror="this.src='https://placehold.co/210x297/e2e8f0/475569?text=CV+EN'">
+                        <a href="CV_Clement_Robert_EN.pdf" target="_blank" class="mt-4 text-sm font-semibold text-blue-600 hover:underline">Download PDF</a>
+                    </div>
+
+                    <!-- LinkedIn QR -->
+                    <div class="flex flex-col items-center justify-center h-full pt-4 md:pt-0">
+                        <h3 class="font-serif font-bold text-lg mb-4 text-center">Let's Connect</h3>
+                        <!-- Remplacer "qr_linkedin.png" par ton image -->
+                        <div class="bg-gray-50 p-4 rounded-sm shadow-inner border border-gray-100">
+                            <img src="qr_linkedin.png" alt="LinkedIn QR Code" class="w-40 h-40 object-contain" onerror="this.src='https://placehold.co/150x150/e2e8f0/475569?text=QR+Code'">
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600 text-center">Scan to visit my LinkedIn profile</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2026 Clément Robert - INP ENSEEIHT</p>
+    </footer>
+
+</body>
+</html>
